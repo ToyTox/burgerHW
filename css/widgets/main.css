@@ -40,7 +40,6 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   /* 1 */
   height: 0;
@@ -75,7 +74,6 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
   /* 2 */ }
 
@@ -208,7 +206,6 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   color: inherit;
@@ -240,7 +237,6 @@ textarea {
  */
 [type="checkbox"],
 [type="radio"] {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -359,12 +355,7 @@ body {
 .container {
   width: 940px;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column; }
 
 h1,
@@ -395,7 +386,6 @@ footer {
   width: 100%; }
 
 * {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 button {
@@ -405,7 +395,12 @@ button {
 
 .section {
   height: 100vh;
-  min-height: 650px; }
+  min-height: 650px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column; }
+  .section--non-centered {
+    justify-content: flex-start; }
 
 .hero {
   background: url("../../img/bg/hero.jpg") center center/cover no-repeat;
@@ -415,14 +410,8 @@ button {
   height: 100%; }
 
 .hero__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-flex: .8;
-  -ms-flex: .8;
   flex: .8; }
 
 .hero__desc {
@@ -436,42 +425,24 @@ button {
   font-family: 'Lifehack-Medium'; }
 
 .header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   padding-top: 12px; }
 
 .header__buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center; }
 
 .nav {
   margin-right: 15px; }
 
 .nav__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center; }
 
 .nav__iten {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   margin-right: 15px; }
   .nav__iten:after {
@@ -511,6 +482,8 @@ button {
     color: #2f3234; }
   .title--color--white {
     color: white; }
+  .title--centered {
+    text-align: center; }
 
 .scroll-down-btn {
   width: 29px;
@@ -520,6 +493,25 @@ button {
   position: absolute;
   bottom: 20px;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
   transform: translateX(-50%); }
+
+.best {
+  background: url("../../img/bg/best.jpg") center center/cover no-repeat; }
+
+.best__list {
+  display: flex; }
+
+.best__item {
+  flex: 1;
+  margin-right: 35px;
+  text-align: center; }
+  .best__item:last-child {
+    margin-right: 0; }
+
+.best__picture-icon {
+  margin-bottom: 33px; }
+
+.best__title {
+  font-size: 24px;
+  font-family: 'Lifehack-Medium';
+  margin-bottom: 25px; }
