@@ -23,8 +23,5 @@ yarn-debug.log*
 yarn-error.log*
 
 # project
-img/
-*.svg
-*.png
 css/_misc/fonts/
 prepros-6.config
