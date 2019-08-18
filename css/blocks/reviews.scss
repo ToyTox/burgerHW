@@ -11,8 +11,19 @@
   filter: grayscale(100%);
 
   &:hover {
-    .reviews__hover{
+    .reviews__hover {
       opacity: 1;
+    }
+
+    .reviews__title {
+      margin-bottom: 30px;
+      @include gagalin;
+      font-size: 14px; 
+    }
+
+    .reviews__text {
+      margin-bottom: 17px;
+      @include ubuntu;
     }
   }
 }
