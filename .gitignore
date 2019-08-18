@@ -3,6 +3,7 @@
 # dependencies
 /node_modules
 idea
+.vscode/
 
 # testing
 /coverage
@@ -22,4 +23,8 @@ yarn-debug.log*
 yarn-error.log*
 
 # project
-/img
+img/
+*.svg
+*.png
+css/_misc/fonts/
+prepros-6.config
