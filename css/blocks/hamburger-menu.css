@@ -1,0 +1,17 @@
+.hamburger-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  display: none; }
+
+.hamburger-menu__logo {
+  position: absolute;
+  top: rem(10px);
+  left: rem(30px); }
+
+/*# sourceMappingURL=hamburger-menu.css.map */

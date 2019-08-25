@@ -7,6 +7,8 @@ $red: #e35028;
 //normalize
 @import "../_misc/normolize.scss";
 
+// media
+@import "../_misc/media.scss";
 
 //setups
 @import "../_misc/mixins.scss";
@@ -25,3 +27,9 @@ $red: #e35028;
 @import "../blocks/order.scss";
 @import "../blocks/form.scss";
 @import "../blocks/fixed-menu.scss";
+@import "../blocks/team.scss";
+@import "../blocks/team-accordeon.scss";
+@import "../blocks/menu.scss";
+@import "../blocks/menu-accordeon.scss";
+@import "../blocks/hamburger-menu.scss";
+@import "../blocks/hamburger-menu__item.scss";

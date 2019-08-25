@@ -1,0 +1,90 @@
+.team-accordeon {}
+
+.team-accordeon__item {
+  margin-bottom: rem(rem(40px));
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+  
+  &.active {
+    .team-accordeon__touch {
+      color: $yellow;
+
+      &:after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+.team-accordeon__touch {
+  font-size: rem(rem(14px));
+  @include gagalin;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  margin-bottom: rem(rem(20px));
+  border-radius: rem(rem(9px));
+  
+  
+  &:before, &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: rem(rem(-20px));
+    top: rem(rem(9px));
+    // height: 0;
+    // width: 0;
+  }
+
+  &:after {
+    border-top: rem(rem(7px)) solid $yellow;
+    border-left: rem(rem(5px)) solid transparent;
+    border-right: rem(rem(5px)) solid transparent;
+    border-bottom: rem(rem(0px)) solid transparent;
+    transform: rotate(0deg);
+  }
+  
+  &:before {
+    display: none;
+    border-top: rem(rem(0px)) solid transparent;
+    border-left: rem(rem(5px)) solid transparent;
+    border-right: rem(rem(5px)) solid transparent;
+    border-bottom: rem(rem(7px)) solid $yellow;
+  }
+}
+
+.team-accordeon__desc {
+  // display: none;
+  display: flex;
+}
+
+.team-accordeon__img {
+  display: block;
+  background: url('../../img/team/daniel.jpg') center center no-repeat;
+  border-radius: 50%;
+  width: rem(rem(100px));
+  height: rem(rem(100px));
+  // width: 28%;
+}
+
+.team-accordeon__text {
+  font-size: rem(rem(13px));
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  margin-left: rem(rem(32px));
+  @include ubuntu;
+  width: rem(rem(250px));
+}
+
+.team-accordeon__role {
+  font-weight: bold;
+  margin-bottom: rem(rem(20px));
+}
+
+.team-accordeon__description {
+  line-height: 1.90;
+}

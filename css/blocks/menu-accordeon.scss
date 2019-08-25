@@ -1,0 +1,49 @@
+.menu-accordeon {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+.menu-accordeon__item {
+  // display: flex;
+  // flex-direction: column;
+  height: 100%;
+  // align-items: flex-start;
+  float: left;
+  
+  &-active {
+    .menu-accordeon__touch-text {
+      color: $yellow;
+    }
+  }
+}
+
+.menu-accordeon__touch {
+  float: left;
+  position: relative;
+  width: rem(rem(80px));
+  display: block;
+  height: 100%;
+}
+
+.menu-accordeon__touch-text {
+  color: #fff;
+  @include gagalin;
+  transform: rotate(-90deg) translateY(-50%);
+  font-size: rem(rem(40px));
+  transform-origin: 0 0;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  margin-top: rem(rem(-20px));
+  // background: url('../../img/bg/meateat.jpg');
+}
+
+.menu-accordeon__text {
+  height: 100%;
+	float: left;
+	background: rgba(#2f3234, .93);
+	width: 0;
+	overflow: hidden;
+}

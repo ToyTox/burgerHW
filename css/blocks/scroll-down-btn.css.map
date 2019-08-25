@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,gBAAiB;EACf,KAAK,EAAE,SAAS;EAChB,MAAM,EAAE,SAAS;EACjB,UAAU,EAAE,iEAAmE;EAC/E,OAAO,EAAE,KAAK;EACd,QAAQ,EAAE,QAAQ;EAClB,MAAM,EAAE,SAAS;EACjB,IAAI,EAAE,GAAG;EACT,SAAS,EAAE,gBAAgB",
+"sources": ["scroll-down-btn.scss"],
+"names": [],
+"file": "scroll-down-btn.css"
+}
