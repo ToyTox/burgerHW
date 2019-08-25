@@ -193,7 +193,7 @@ button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
-  outline: rem(1px) dotted ButtonText; }
+  outline: 1px dotted ButtonText; }
 
 /**
  * Correct the padding in Firefox.
@@ -260,7 +260,7 @@ textarea {
 [type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  outline-offset: rem(-2px);
+  outline-offset: -2px;
   /* 2 */ }
 
 /**
@@ -342,7 +342,7 @@ html {
   height: 100%; }
 
 body {
-  font-style: rem(16px);
+  font-style: 16px;
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -360,7 +360,7 @@ body {
 .container {
   position: relative;
   width: 95%;
-  max-width: rem(940px);
+  max-width: 940px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -411,7 +411,7 @@ button {
 
 .section {
   height: 100vh;
-  min-height: rem(650px);
+  min-height: 650px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -446,11 +446,11 @@ button {
   flex: .8; }
 
 .hero__desc {
-  padding-top: rem(85px);
-  margin-left: rem(20px); }
+  padding-top: 85px;
+  margin-left: 20px; }
 
 .hero__subtitle {
-  font-size: rem(65px);
+  font-size: 65px;
   color: #fff;
   line-height: 1;
   font-family: 'Lifehack-Medium'; }
@@ -462,7 +462,7 @@ button {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding-top: rem(12px);
+  padding-top: 12px;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between; }
@@ -476,7 +476,7 @@ button {
   align-items: center; }
 
 .nav {
-  margin-right: rem(15px);
+  margin-right: 15px;
   font-family: 'Ubuntu', Helvetica, sans-serif;
   font-weight: 300; }
 
@@ -495,15 +495,15 @@ button {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-right: rem(15px); }
+  margin-right: 15px; }
   .nav__item:after {
     content: "";
-    height: rem(4px);
-    width: rem(4px);
+    height: 4px;
+    width: 4px;
     background: #fff;
     border-radius: 50%;
     display: block;
-    margin-left: rem(15px); }
+    margin-left: 15px; }
   .nav__item:last-child {
     margin-right: 0; }
     .nav__item:last-child:after {
@@ -512,22 +512,22 @@ button {
 .nav__link {
   text-decoration: none;
   color: #fff;
-  font-size: rem(13px);
+  font-size: 13px;
   text-transform: uppercase; }
 
 .btn {
-  padding: rem(12px) rem(15px);
-  border-radius: rem(5px);
+  padding: 12px 15px;
+  border-radius: 5px;
   background: #e35028;
   text-transform: uppercase;
   color: #fff;
-  font-size: rem(13px); }
+  font-size: 13px; }
 
 .title {
   font-size: 4.5rem;
   font-family: 'Gagalin-Regular', Helvetica, sans-serif;
   color: #f9b43b;
-  margin-bottom: rem(55px);
+  margin-bottom: 55px;
   line-height: 1; }
   .title--color--black {
     color: #2f3234; }
@@ -537,12 +537,12 @@ button {
     text-align: center; }
 
 .scroll-down-btn {
-  width: rem(29px);
-  height: rem(14px);
+  width: 29px;
+  height: 14px;
   background: url("../../img/arrow-scroll.svg") center center/contain no-repeat;
   display: block;
   position: absolute;
-  bottom: rem(20px);
+  bottom: 20px;
   left: 50%;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
@@ -560,18 +560,18 @@ button {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  margin-right: rem(35px);
+  margin-right: 35px;
   text-align: center; }
   .best__item:last-child {
     margin-right: 0; }
 
 .best__picture-icon {
-  margin-bottom: rem(34px); }
+  margin-bottom: 34px; }
 
 .best__title {
-  font-size: rem(24px);
+  font-size: 24px;
   font-family: 'Lifehack-Medium';
-  margin-bottom: rem(25px); }
+  margin-bottom: 25px; }
 
 .reviews__list {
   height: 100%;
@@ -590,16 +590,16 @@ button {
   .reviews__item:hover .reviews__hover {
     opacity: 1; }
   .reviews__item:hover .reviews__title {
-    margin-bottom: rem(30px);
+    margin-bottom: 30px;
     font-family: 'Gagalin-Regular', Helvetica, sans-serif;
-    font-size: rem(14px); }
+    font-size: 14px; }
   .reviews__item:hover .reviews__text {
-    margin-bottom: rem(17px);
+    margin-bottom: 17px;
     font-family: 'Ubuntu', Helvetica, sans-serif;
     font-weight: 300; }
 
 .reviews__hover {
-  padding: rem(50px) rem(19px) rem(19px);
+  padding: 50px 19px 19px;
   color: #fff;
   position: absolute;
   top: 0;
@@ -632,7 +632,7 @@ button {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  margin-right: rem(20px); }
+  margin-right: 20px; }
   .form__column:last-child {
     margin-right: 0; }
 
@@ -653,13 +653,13 @@ button {
 
 .form__input {
   background: #fff;
-  border-radius: rem(3px);
+  border-radius: 3px;
   border: none;
-  padding: rem(8px) rem(21px);
+  padding: 8px 21px;
   width: 100%; }
   .form__input--textarea {
     resize: none;
-    height: rem(110px);
+    height: 110px;
     margin-bottom: 1.25rem; }
 
 .form-buttons-radio, .form-buttons-checkbox {
@@ -682,23 +682,23 @@ button {
 
 .fixed-menu {
   position: fixed;
-  top: rem(95px);
-  right: rem(53px); }
+  top: 95px;
+  right: 53px; }
 
 .fixed-menu__item--active .fixed-menu__dot {
   border-color: white; }
 
 .fixed-menu__dot {
-  height: rem(16px);
-  width: rem(16px);
+  height: 16px;
+  width: 16px;
   border-radius: 50%;
-  border: rem(1px) solid transparent;
-  margin-bottom: rem(3px);
+  border: 1px solid transparent;
+  margin-bottom: 3px;
   position: relative; }
   .fixed-menu__dot:before {
     content: "";
-    width: rem(6px);
-    height: rem(6px);
+    width: 6px;
+    height: 6px;
     border-radius: 50%;
     background: #fff;
     position: absolute;

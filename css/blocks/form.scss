@@ -6,6 +6,10 @@
   flex: 1;
   margin-right: rem(20px);
 
+  @include tablets {
+    flex-direction: column;
+  }
+
   &:last-child {
     margin-right: 0;
   }
@@ -17,9 +21,15 @@
 
 .form__block {
   flex: 1;
-  margin-right: rem(rem(20px));
+  margin-right: rem(20px);
   display: block;
-  margin-bottom: rem(rem(20px));
+  margin-bottom: rem(20px);
+
+  @include tablets {
+    width: 100%;
+    margin-right: 0;
+    padding: 0 20%;
+  }
 
   &:last-child {
     margin-right: 0;
@@ -36,7 +46,7 @@
   &--textarea {
     resize: none;
     height: rem(110px);
-    margin-bottom: rem(rem(20px));
+    margin-bottom: rem(20px);
   }
 }
 
@@ -47,14 +57,14 @@
 .radio {
   position: relative;
   white-space: nowrap;
-  margin-right: rem(rem(20px));
-  margin-left: rem(rem(20px));
+  margin-right: rem(20px);
+  margin-left: rem(20px);
   cursor: pointer;
-  margin-bottom: rem(rem(30px));
+  margin-bottom: rem(30px);
 }
 
 .radio-elem {
   position: absolute;
-  top: rem(rem(5px));
-  left: rem(rem(-20px));
+  top: rem(5px);
+  left: rem(-20px);
 }

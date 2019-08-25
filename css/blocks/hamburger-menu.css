@@ -4,7 +4,11 @@
   right: 0;
   left: 0;
   bottom: 0;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   z-index: 100;
   display: none; }
@@ -13,5 +17,3 @@
   position: absolute;
   top: rem(10px);
   left: rem(30px); }
-
-/*# sourceMappingURL=hamburger-menu.css.map */

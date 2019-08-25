@@ -10,6 +10,11 @@
   position: relative;
   filter: grayscale(100%);
 
+  @include tablets {
+    width: 50%;
+    height: 25%;
+  }
+
   &:hover {
     .reviews__hover {
       opacity: 1;

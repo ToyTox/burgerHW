@@ -1,7 +1,12 @@
-.team-accordeon {}
+.team-accordeon {
+  @include tablets {
+    text-align: center;
+
+  }
+}
 
 .team-accordeon__item {
-  margin-bottom: rem(rem(40px));
+  margin-bottom: rem(40px);
   
   &:last-child {
     margin-bottom: 0;
@@ -19,70 +24,87 @@
 }
 
 .team-accordeon__touch {
-  font-size: rem(rem(14px));
+  font-size: rem(14px);
   @include gagalin;
   color: #fff;
   text-decoration: none;
   display: block;
   position: relative;
-  margin-bottom: rem(rem(20px));
-  border-radius: rem(rem(9px));
+  margin-bottom: rem(20px);
+  border-radius: rem(9px);
   
+  @include tablets {
+    display: inline-flex;
+  }
   
   &:before, &:after {
     content: '';
     display: block;
     position: absolute;
-    left: rem(rem(-20px));
-    top: rem(rem(9px));
+    left: rem(-20px);
+    top: rem(9px);
     // height: 0;
     // width: 0;
   }
 
   &:after {
-    border-top: rem(rem(7px)) solid $yellow;
-    border-left: rem(rem(5px)) solid transparent;
-    border-right: rem(rem(5px)) solid transparent;
-    border-bottom: rem(rem(0px)) solid transparent;
+    border-top: rem(7px) solid $yellow;
+    border-left: rem(5px) solid transparent;
+    border-right: rem(5px) solid transparent;
+    border-bottom: rem(0px) solid transparent;
     transform: rotate(0deg);
   }
   
   &:before {
     display: none;
-    border-top: rem(rem(0px)) solid transparent;
-    border-left: rem(rem(5px)) solid transparent;
-    border-right: rem(rem(5px)) solid transparent;
-    border-bottom: rem(rem(7px)) solid $yellow;
+    border-top: rem(0px) solid transparent;
+    border-left: rem(5px) solid transparent;
+    border-right: rem(5px) solid transparent;
+    border-bottom: rem(7px) solid $yellow;
   }
 }
 
 .team-accordeon__desc {
-  // display: none;
   display: flex;
+  overflow: hidden;
+
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
-.team-accordeon__img {
+// .team-accordeon__img {
+
+// }
+
+.team-accordeon__pic {
   display: block;
   background: url('../../img/team/daniel.jpg') center center no-repeat;
   border-radius: 50%;
-  width: rem(rem(100px));
-  height: rem(rem(100px));
+  width: rem(100px);
+  height: rem(100px);
   // width: 28%;
 }
 
 .team-accordeon__text {
-  font-size: rem(rem(13px));
+  font-size: rem(13px);
   color: #fff;
   display: flex;
   flex-direction: column;
-  margin-left: rem(rem(32px));
+  margin-left: rem(32px);
   @include ubuntu;
-  width: rem(rem(250px));
+  width: rem(250px);
+  // overflow: hidden;
+
+  &-active {
+    display: flex;
+  }
 }
 
 .team-accordeon__role {
   font-weight: bold;
-  margin-bottom: rem(rem(20px));
+  margin-bottom: rem(20px);
 }
 
 .team-accordeon__description {
