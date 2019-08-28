@@ -3,6 +3,10 @@ html {
   height: 100%;
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
   font-style: rem(16px);
   line-height: 1.42;
@@ -16,7 +20,7 @@ body {
 .wrapper {
   position: relative;
   width: 100%;
-  // min-width: rem(940px) + rem(20px);
+  min-width: rem(940px) + rem(20px);
   min-height: 100%;
   overflow: hidden;
 }
