@@ -34,13 +34,20 @@
     }
   }
 
+  @include phones {
+    &:nth-child(3) {
+      margin-right: 0;
+    }
+  }
+
   &:last-child {
     margin-right: 0;
   }
 
   &--floor{
     @include phones {
-      visibility: hidden;
+      max-width: 0%;
+      opacity: 0;
     }
   }
 }
@@ -59,8 +66,14 @@
   }
 }
 
-.form-buttons-radio, .form-buttons-checkbox {
+.form-buttons-radio,
+.form-buttons-checkbox,
+.form-buttons-buttons {
   display: flex;
+  
+  @include phones {
+    justify-content: center;
+  }
 }
 
 .radio {

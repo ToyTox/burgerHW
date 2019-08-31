@@ -36,12 +36,15 @@
 
 .hero__content-picture,
 .hero__desc {
-  width: 50%;
-
   @include tablets {
     width: 100%;
     align-items: center;
   }
+}
+
+.burger-logo {
+  width: 100%;
+  height: auto;
 }
 
 .hero__desc {
@@ -50,8 +53,12 @@
 }
 
 .hero__title {
-  @include phones {
+  @include tablets {
     font-size: rem(63px);
+  }
+
+  @include phones {
+    font-size: rem(61px);
   }
 }
 
@@ -61,6 +68,10 @@
   line-height: 1;
   align-items: center;
   @include lifehack;
+
+  @include tablets {
+    font-size: rem(52px);
+  }
 
   @include phones {
     font-size: rem(42px);
