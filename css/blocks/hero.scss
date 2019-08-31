@@ -14,7 +14,23 @@
   
   @include tablets {
     flex-direction: column;
-    padding: 0 23%;
+    padding: 0 18%;
+  }
+
+  @include phones {
+    // flex-direction: column;
+    padding: 0 12%;
+  }
+}
+
+.hero__left,
+.hero__right {
+  float: left;
+  width: 50%;
+
+  @include tablets {
+    float: none;
+    width: 100%;
   }
 }
 
@@ -24,17 +40,29 @@
 
   @include tablets {
     width: 100%;
+    align-items: center;
   }
 }
 
 .hero__desc {
   padding-top: rem(45px);
-  margin-left: rem(20px);
+  margin-left: rem(60px);
+}
+
+.hero__title {
+  @include phones {
+    font-size: rem(63px);
+  }
 }
 
 .hero__subtitle {
-  font-size: 65px;
+  font-size: rem(65px);
   color: #fff;
   line-height: 1;
+  align-items: center;
   @include lifehack;
+
+  @include phones {
+    font-size: rem(42px);
+  }
 }

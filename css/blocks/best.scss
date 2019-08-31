@@ -4,19 +4,37 @@
 
 .best__list {
   display: flex;
+
+  @include phones {
+    flex-direction: column;
+  }
 }
 
 .best__item {
   flex: 1;
   margin-right: rem(35px);
   text-align: center;
+  padding: 0 rem(15px);
+  display: flex;
+  flex-direction: column;
 
     &:last-child {
       margin-right: 0;
     }
+  
+  @include phones {
+    flex-direction: row;
+    margin-bottom: rem(55px);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .best__picture-icon {
+  width: rem(120px);
+  height: rem(120px);
   margin-bottom: rem(34px);
 }
 
@@ -24,4 +42,11 @@
   font-size: rem(24px);
   @include lifehack;
   margin-bottom: rem(25px);
+}
+
+.best__desc {
+  @include phones {
+    margin-left: rem(20px);
+    text-align: left;
+  }
 }

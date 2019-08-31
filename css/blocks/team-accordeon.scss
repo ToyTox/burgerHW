@@ -66,11 +66,16 @@
 
 .team-accordeon__desc {
   display: flex;
+  max-height: rem(0px);
   overflow: hidden;
 
   @include tablets {
     flex-direction: column;
     align-items: center;
+  }
+
+  &_expanded {
+    max-height: rem(1000px);
   }
 }
 
@@ -95,10 +100,10 @@
   margin-left: rem(32px);
   @include ubuntu;
   width: rem(250px);
-  // overflow: hidden;
 
-  &-active {
-    display: flex;
+  @include tablets {
+    margin-top: rem(25px);
+    margin-left: 0;
   }
 }
 

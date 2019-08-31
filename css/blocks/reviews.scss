@@ -10,6 +10,7 @@
   position: relative;
   filter: grayscale(100%);
 
+
   @include tablets {
     width: 50%;
     height: 25%;
@@ -23,12 +24,22 @@
     .reviews__title {
       margin-bottom: rem(30px);
       @include gagalin;
-      font-size: rem(14px); 
+      font-size: rem(14px);
+
+      @include phones {
+        font-size: rem(32px);
+        text-align: center;
+      }
     }
 
     .reviews__text {
       margin-bottom: rem(17px);
       @include ubuntu;
+
+      @include phones {
+        max-height: 0%;
+        overflow: hidden;
+      }
     }
   }
 }
@@ -44,6 +55,13 @@
   background: rgba(#444646, .7);
   opacity: 0;
   transition: opacity .3s;
+
+  @include tablets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 

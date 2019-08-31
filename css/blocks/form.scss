@@ -1,14 +1,15 @@
 .form__elem {
   display: flex;
+
+  @include tablets {
+    flex-direction: column;
+    padding: 0 10%;
+  }
 }
 
 .form__column {
   flex: 1;
   margin-right: rem(20px);
-
-  @include tablets {
-    flex-direction: column;
-  }
 
   &:last-child {
     margin-right: 0;
@@ -21,18 +22,26 @@
 
 .form__block {
   flex: 1;
-  margin-right: rem(20px);
+  margin-right: rem(10px);
   display: block;
   margin-bottom: rem(20px);
 
   @include tablets {
-    width: 100%;
-    margin-right: 0;
-    padding: 0 20%;
+    margin-right: rem(25px);
+
+    &:last-child{
+      margin-right: 0;
+    }
   }
 
   &:last-child {
     margin-right: 0;
+  }
+
+  &--floor{
+    @include phones {
+      visibility: hidden;
+    }
   }
 }
 

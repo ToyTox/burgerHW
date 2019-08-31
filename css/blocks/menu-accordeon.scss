@@ -22,7 +22,7 @@
 .menu-accordeon__touch {
   float: left;
   position: relative;
-  width: rem(rem(80px));
+  width: rem(80px);
   display: block;
   height: 100%;
 }
@@ -31,12 +31,12 @@
   color: #fff;
   @include gagalin;
   transform: rotate(-90deg) translateY(-50%);
-  font-size: rem(rem(40px));
+  font-size: rem(40px);
   transform-origin: 0 0;
   position: absolute;
   left: 50%;
   top: 100%;
-  margin-top: rem(rem(-20px));
+  margin-top: rem(-20px);
   // background: url('../../img/bg/meateat.jpg');
 }
 
