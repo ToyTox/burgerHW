@@ -446,22 +446,27 @@ button {
       float: none;
       width: 100%; } }
 
-.hero__content-picture,
-.hero__desc {
-  width: 50%; }
-  @media screen and (max-width: 768px) {
-    .hero__content-picture,
-    .hero__desc {
-      width: 100%;
-      align-items: center; } }
+@media screen and (max-width: 768px) {
+  .hero__content-picture,
+  .hero__desc {
+    width: 100%;
+    align-items: center; } }
+
+.burger-logo {
+  width: 100%;
+  height: auto; }
 
 .hero__desc {
   padding-top: 2.8125rem;
   margin-left: 3.75rem; }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .hero__title {
     font-size: 3.9375rem; } }
+
+@media screen and (max-width: 480px) {
+  .hero__title {
+    font-size: 3.8125rem; } }
 
 .hero__subtitle {
   font-size: 4.0625rem;
@@ -469,6 +474,9 @@ button {
   line-height: 1;
   align-items: center;
   font-family: 'Lifehack-Medium'; }
+  @media screen and (max-width: 768px) {
+    .hero__subtitle {
+      font-size: 3.25rem; } }
   @media screen and (max-width: 480px) {
     .hero__subtitle {
       font-size: 2.625rem; } }
@@ -680,11 +688,15 @@ button {
       margin-right: 1.5625rem; }
       .form__block:last-child {
         margin-right: 0; } }
+  @media screen and (max-width: 480px) {
+    .form__block:nth-child(3) {
+      margin-right: 0; } }
   .form__block:last-child {
     margin-right: 0; }
   @media screen and (max-width: 480px) {
     .form__block--floor {
-      visibility: hidden; } }
+      max-width: 0%;
+      opacity: 0; } }
 
 .form__input {
   background: #fff;
@@ -697,8 +709,15 @@ button {
     height: 6.875rem;
     margin-bottom: 1.25rem; }
 
-.form-buttons-radio, .form-buttons-checkbox {
+.form-buttons-radio,
+.form-buttons-checkbox,
+.form-buttons-buttons {
   display: flex; }
+  @media screen and (max-width: 480px) {
+    .form-buttons-radio,
+    .form-buttons-checkbox,
+    .form-buttons-buttons {
+      justify-content: center; } }
 
 .radio {
   position: relative;
@@ -888,7 +907,8 @@ button {
   position: absolute;
   left: 50%;
   top: 100%;
-  margin-top: -1.25rem; }
+  margin-top: -1.25rem;
+  white-space: nowrap; }
 
 .menu-accordeon__text {
   height: 100%;
