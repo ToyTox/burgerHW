@@ -1,0 +1,49 @@
+.slider__carousel {
+  display: flex;
+  align-items: center;
+}
+
+.slider__left-img {
+  background: center center / cover no-repeat;
+  height: 100%;
+}
+
+.slider__content-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider__content-pic,
+.slider__content-desc {
+  width: 50%;
+  float: left;
+}
+
+.slider__icon {
+  width: 100%;
+  height: auto;
+}
+
+.slider__content-text {
+  margin-bottom: rem(36px);
+  color: #fff;
+  font-size: rem(14px);
+}
+
+.slider__content-price {
+  display: flex;
+}
+
+.title__price-burger {
+  font-size: rem(42px);
+  @include gagalin;
+  color: $red;
+  text-transform: lowercase; 
+  margin-right: rem(30px);
+}
+
+.slider__right-img{
+  background: center center / cover no-repeat;
+  height: 100%;
+}
