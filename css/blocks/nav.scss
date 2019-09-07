@@ -12,6 +12,7 @@
   display: flex;
   align-items: center;
   margin-right: rem(15px);
+
   &:after {
     content: "";
     height: rem(4px);
@@ -21,8 +22,10 @@
     display: block;
     margin-left: rem(15px);
   }
+
   &:last-child {
     margin-right: 0;
+    
     &:after {
       display: none;
     }

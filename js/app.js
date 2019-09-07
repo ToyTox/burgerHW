@@ -7,7 +7,7 @@ btn.addEventListener('click', function() {
   fullScreen.classList.add(activeclass);
 });
 
-let x = document.getElementById("close");
+let x = document.getElementById("open");
 const closeFullScreen = document.querySelector('.hamburger-menu');
 
 const deactiveclass = 'hamburger-menu--active';
