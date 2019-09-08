@@ -16,6 +16,14 @@
     .menu-accordeon__touch-text {
       color: $yellow;
     }
+
+    .menu-accordeon__text {
+      width: 100%;
+      visibility: initial;
+      // overflow: initial;
+      float: none;
+
+    }
   }
 }
 
@@ -43,8 +51,10 @@
 
 .menu-accordeon__text {
   height: 100%;
-	float: left;
+  float: left;
+  // padding: rem(60px) rem(30px);
 	background: rgba(#2f3234, .93);
 	width: 0;
-	overflow: hidden;
+  // overflow: hidden;
+  visibility: hidden;
 }

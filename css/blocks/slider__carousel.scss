@@ -1,6 +1,7 @@
 .slider__carousel {
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .slider__left-img {
@@ -12,12 +13,40 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+}
+
+.slider__content-list {
+  display: flex;
+}
+
+.slider__content-item {
+  width: 100%;
+  height: 100%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  display: flex;
+
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  @include phones {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .slider__content-pic,
 .slider__content-desc {
   width: 50%;
   float: left;
+  
+  @include tablets {
+    float: none;
+    text-align: center;
+  }
 }
 
 .slider__icon {
