@@ -11,9 +11,36 @@
 .footer__container {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
 }
 
 .column {
-  flex-direction: column;
+  display: flex;
+}
+
+.column__addres {
+  color: #fff;
+}
+
+.social {
+  display: flex;
+}
+
+.phone {
+  text-decoration: none;
+  color: $red;
+}
+
+.social__item {
+  margin-left: rem(16px);
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.social__link {
+  display: flex;
+  height: rem(20px);
 }

@@ -15,6 +15,7 @@ $red: #e35028;
 @import "../_misc/fonts.scss";
 @import "../_misc/layout.scss";
 
+// @import "../blocks/*.scss";
 @import "../blocks/section.scss";
 @import "../blocks/hero.scss";
 @import "../blocks/header.scss";
@@ -35,4 +36,5 @@ $red: #e35028;
 @import "../blocks/menu-accordeon.scss";
 @import "../blocks/hamburger-menu.scss";
 @import "../blocks/hamburger-menu-link.scss";
+@import "../blocks/map.scss";
 @import "../blocks/footer.scss";

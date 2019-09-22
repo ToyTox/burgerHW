@@ -6,11 +6,10 @@
 }
 
 .menu-accordeon__item {
-  // display: flex;
-  // flex-direction: column;
+  display: flex;
   height: 100%;
-  // align-items: flex-start;
   float: left;
+  position: relative;
   
   &-active {
     .menu-accordeon__touch-text {
@@ -18,13 +17,46 @@
     }
 
     .menu-accordeon__text {
-      width: 100%;
-      visibility: initial;
-      // overflow: initial;
-      float: none;
+      color: #fff;
+      opacity: 1;
+      padding: rem(32px) rem(16px);
+      width: rem(540px);
+      visibility: visible;
+      @include ubuntu;
+      max-width: rem(460px);
+      background: rgba(#2f3234, .93);
+      
+      @include tablets {
+        max-width: rem(540px);
+      }
 
+      @include phones {
+        max-width: rem(485px);
+        position: absolute;
+        opacity: 1;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: rem(80px);
+      }
     }
   }
+}
+
+.menu-accordeon__item-active {
+// .menu-accordeon__text-active {
+  // color: #fff;
+  width: rem(540px);
+  visibility: visible;
+  opacity: 1;
+
+  @include tablets {
+    width: rem(640px);
+  }
+
+  @include phones {
+    width: rem(500px);
+  } 
 }
 
 .menu-accordeon__touch {
@@ -50,11 +82,20 @@
 }
 
 .menu-accordeon__text {
+  // height: 100%;
+  // float: left;
+  // // padding: rem(60px) rem(30px);
+	// background: rgba(#2f3234, .93);
+	// width: 0;
+  // // overflow: hidden;
+  // visibility: hidden;
+  color: #fff;
+  @include ubuntu;
+  max-width: rem(0px);
   height: 100%;
   float: left;
-  // padding: rem(60px) rem(30px);
 	background: rgba(#2f3234, .93);
-	width: 0;
-  // overflow: hidden;
   visibility: hidden;
+  opacity: 0;
+  transition: all 1s ease-in-out;
 }

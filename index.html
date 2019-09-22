@@ -6,6 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="./css/widgets/main.css">
+  <!-- <link rel="stylesheet" href="./dist/main.css"> -->
+  <!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=688b9400-1a97-4770-ac85-9e0844129850&lang=ru_RU" type="text/javascript"> -->
+  </script>
 </head>
 <body>
   <div class="wrapper">
@@ -101,6 +104,7 @@
       </div>
     </section>
 
+      <!-- Секция с слайдером -->
     <section class="section slider">
       <div class="container slider__container">
         <div class="slider__carousel">
@@ -226,12 +230,12 @@
     <section class="section menu">
       <h2 class="title title__menu title--color--white">Меню</h2>
       <ul class="menu-accordeon" id="accordeonMenu">
-        <li class="menu-accordeon__item menu-accordeon__item-active ">
+        <li class="menu-accordeon__item menu-accordeon__item-active">
           <a href="#" class="menu-accordeon__touch" style="background-image: url('./img/bg/meateat.jpg')">
             <div class="menu-accordeon__touch-text">для мясоедов</div>
           </a>
           <div class="menu-accordeon__desc">
-            <div class="menu-accordeon__text">
+            <div class="menu-accordeon__text menu-accordeon__text-active">
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam incidunt possimus quibusdam expedita cumque voluptates tempora vel similique tenetur placeat, aperiam ut hic explicabo illum sed aliquid veritatis molestias necessitatibus.</p>
             </div>
           </div>
@@ -422,21 +426,36 @@
 
       <!-- Секция с картой -->
     <section class="section map">
-      <div class="google-map"></div>
+        <div id="map" class="map"></div>
       <footer class="footer">
         <div class="container footer__container">
-          <div class="column">
-            <div class="column__right">
-              <div class="column__addres">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</div>
-              <a href="tel:+78123771377" class="phone">+7 (812) 377-13-77</a>
-            </div>
-            <div class="column__left">
-              <ul class="social">
-                <li class="social__item">
-                  <a href="#" class="social__link vk-link"></a>
-                </li>
-              </ul>
+          <div class="column__right">
+            <div class="column__addres">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</div>
+            <a href="tel:+78123771377" class="phone">+7 (812) 377-13-77</a>
           </div>
+          <div class="column__left">
+            <ul class="social">
+              <li class="social__item">
+                <a href="#" class="social__link vk-link">
+                  <img src="./img/vk.svg" alt="" class="social__logo">
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link fb-link">
+                  <img src="./img/fb.svg" alt="" class="social__logo">
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link inst-link">
+                  <img src="./img/inst.svg" alt="" class="social__logo">
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link tw-link">
+                  <img src="./img/twitter.svg" alt="" class="social__logo">
+                </a>
+              </li>
+            </ul>
           
           </div>
         </div>
@@ -512,10 +531,16 @@
 
   </div>
 
+  <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+  <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=688b9400-1a97-4770-ac85-9e0844129850" type="text/javascript"></script>
+  <!-- <script src="./js/main.js"></script> -->
   <script src="./js/app.js"></script>
   <script src="./js/slider.js"></script>
   <script src="./js/accordeon.js"></script>
   <script src="./js/form.js"></script>
+  <script src="./js/myMap.js"></script>
+
 
 </body>
 </html>
