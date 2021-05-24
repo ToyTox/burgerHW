@@ -3,26 +3,40 @@ html {
   height: 100%;
 }
 
+html {
+  font-size: 16px;
+
+  @include tablets {
+    font-size: rem(15px);
+  }
+
+  @include phones {
+    font-size: rem(13px);
+  }
+}
+
 body {
-  font-style: 16px;
+  font-style: rem(16px);
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
-  // @include ubuntu();
+  @include ubuntu();
   color: black;
 }
 
 .wrapper {
   position: relative;
   width: 100%;
-  min-width: 940px + 20px;
+  // max-width: rem(940px) + rem(20px);
   min-height: 100%;
   overflow: hidden;
 }
 
 .container {
-  width: 940px;
+  position: relative;
+  width: 95%;
+  max-width: rem(940px);
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -70,4 +84,6 @@ button {
   background: transparent;
   border: none;
   cursor: pointer;
+  color: inherit;
+  @include ubuntu;
 }

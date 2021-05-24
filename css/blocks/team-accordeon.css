@@ -1,0 +1,59 @@
+.team-accordeon__item {
+  margin-bottom: rem(40px); }
+  .team-accordeon__item:last-child {
+    margin-bottom: 0; }
+  .team-accordeon__item.active .team-accordeon__touch:after {
+    transform: rotate(180deg); }
+
+.team-accordeon__touch {
+  font-size: rem(14px);
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  margin-bottom: rem(20px);
+  border-radius: rem(9px); }
+  .team-accordeon__touch:before, .team-accordeon__touch:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: rem(-20px);
+    top: rem(9px); }
+  .team-accordeon__touch:after {
+    border-left: rem(5px) solid transparent;
+    border-right: rem(5px) solid transparent;
+    border-bottom: rem(0px) solid transparent;
+    transform: rotate(0deg); }
+  .team-accordeon__touch:before {
+    display: none;
+    border-top: rem(0px) solid transparent;
+    border-left: rem(5px) solid transparent;
+    border-right: rem(5px) solid transparent; }
+
+.team-accordeon__desc {
+  display: flex; }
+
+.team-accordeon__pic {
+  display: block;
+  background: url("../../img/team/daniel.jpg") center center no-repeat;
+  border-radius: 50%;
+  width: rem(100px);
+  height: rem(100px); }
+
+.team-accordeon__text {
+  font-size: rem(13px);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  margin-left: rem(32px);
+  width: rem(250px);
+  overflow: hidden; }
+  .team-accordeon__text-active {
+    display: flex; }
+
+.team-accordeon__role {
+  font-weight: bold;
+  margin-bottom: rem(20px); }
+
+.team-accordeon__description {
+  line-height: 1.90; }
