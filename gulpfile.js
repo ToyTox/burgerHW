@@ -1,4 +1,10 @@
-const { src, dest, task, series, watch } = require('gulp');
+const {
+  src,
+  dest,
+  task,
+  series,
+  watch
+} = require('gulp');
 const clean = require('gulp-rm');
 const sass = require('gulp-sass');
 const concat = require('gulp-concat');
@@ -14,55 +20,52 @@ const sourcemaps = require('gulp-sourcemaps');
 
 sass.compiler = require('node-sass');
 
-task('clean', () => {
-  return src('dist/**/*', { read: false }).pipe(clean());
-});
+function handleClean() {
+  return src('dist/**/*', {
+    read: false
+  }).pipe(clean())
+}
 
-task('copy:html', () => {
+function copyHtml() {
   return src('src/*.html')
-    .pipe(dest('dist'))
-    .pipe(reload({ stream: true }));
-});
+    .pipe(dest('./dist'))
+}
 
-task('copy:img', () => {
+function copyImages() {
   return src('src/img/**/*')
-    .pipe(dest('dist/img'))
-    .pipe(reload({ stream: true }));
-});
+    .pipe(dest('./dist/img'))
+}
 
-const styles = [
-  // 'node_modules/normalize.css/normalize.css',
-  'src/css/widgets/main.scss',
-];
+function handleStyles() {
+  const styles = ['node_modules/normalize.css/normalize.css', 'src/css/index.scss'];
 
-task('styles', () => {
-  return (
-    src(styles)
-      .pipe(sourcemaps.init())
-      .pipe(concat('main.scss'))
-      .pipe(sassGlob())
-      .pipe(sass().on('error', sass.logError))
-      .pipe(px2rem({ dpr: 1 }))
-      // .pipe(gcmq())
-      .pipe(postcss([autoprefixer()]))
-      .pipe(cleanCSS())
-      .pipe(sourcemaps.write())
-      .pipe(dest('dist'))
-      .pipe(browserSync.stream())
-  );
-});
+  return src(styles)
+    .pipe(sourcemaps.init())
+    .pipe(concat('index.scss'))
+    .pipe(sassGlob())
+    .pipe(sass().on('error', sass.logError))
+    .pipe(px2rem({
+      dpr: 1
+    }))
+    // .pipe(gcmq())
+    .pipe(postcss([autoprefixer()]))
+    .pipe(cleanCSS())
+    .pipe(sourcemaps.write())
+    .pipe(dest('./dist'))
+}
 
-task('server', () => {
+function server() {
+  watch('./src/*.html', series(copyHtml));
+  watch('./src/img/**/*.*', series(copyImages));
+  watch('./src/css/**/*.scss', series(handleStyles));
+
   browserSync.init({
     server: {
       baseDir: './dist',
     },
     open: false,
   });
-});
+}
 
-watch('./src/css/**/*.scss', series('styles'));
-watch('./src/img/**/*.*', series('copy:img'));
-watch('./src/*.html', series('copy:html'));
-
-task('default', series('clean', 'copy:html', 'styles', 'copy:img', 'server'));
+exports.serve = series(handleClean, copyHtml, copyImages, handleStyles, server);
+exports.build = series(handleClean, copyHtml, copyImages, handleStyles);

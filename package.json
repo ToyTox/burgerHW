@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "gulp",
+    "start": "gulp serve",
+    "build": "gulp build",
     "format": "prettier --write ./src"
   },
   "keywords": [],
