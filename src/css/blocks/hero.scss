@@ -1,0 +1,79 @@
+.hero {
+  background: url('../../img/bg/hero.jpg') center center / cover no-repeat;
+  position: relative;
+}
+
+.hero__container {
+  height: 100%;
+}
+
+.hero__content {
+  display: flex;
+  align-items: center;
+  flex: 0.8;
+
+  @include tablets {
+    flex-direction: column;
+    padding: 0 18%;
+  }
+
+  @include phones {
+    // flex-direction: column;
+    padding: 0 12%;
+  }
+}
+
+.hero__left,
+.hero__right {
+  float: left;
+  width: 50%;
+
+  @include tablets {
+    float: none;
+    width: 100%;
+  }
+}
+
+.hero__content-picture,
+.hero__desc {
+  @include tablets {
+    width: 100%;
+    align-items: center;
+  }
+}
+
+.burger-logo {
+  width: 100%;
+  height: auto;
+}
+
+.hero__desc {
+  padding-top: rem(45px);
+  margin-left: rem(60px);
+}
+
+.hero__title {
+  @include tablets {
+    font-size: rem(63px);
+  }
+
+  @include phones {
+    font-size: rem(61px);
+  }
+}
+
+.hero__subtitle {
+  font-size: rem(65px);
+  color: #fff;
+  line-height: 1;
+  align-items: center;
+  @include lifehack;
+
+  @include tablets {
+    font-size: rem(52px);
+  }
+
+  @include phones {
+    font-size: rem(42px);
+  }
+}

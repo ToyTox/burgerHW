@@ -1,0 +1,35 @@
+{
+  "name": "site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp",
+    "format": "prettier --write ./src"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "2.26.13",
+    "gulp": "4.0.2",
+    "gulp-autoprefixer": "7.0.1",
+    "gulp-clean-css": "4.3.0",
+    "gulp-concat": "2.6.1",
+    "gulp-group-css-media-queries": "1.2.2",
+    "gulp-postcss": "9.0.0",
+    "gulp-rm": "2.0.0",
+    "gulp-sass": "4.1.0",
+    "gulp-sass-glob": "1.1.0",
+    "gulp-smile-px2rem": "0.1.0",
+    "gulp-sourcemaps": "3.0.0",
+    "node-sass": "5.0.0",
+    "postcss": "8.2.1",
+    "postcss-cli": "8.3.1",
+    "autoprefixer": "10.1.0",
+    "prettier": "2.2.1"
+  },
+  "dependencies": {
+    "normalize.css": "8.0.1"
+  }
+}
