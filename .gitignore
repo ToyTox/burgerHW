@@ -24,3 +24,4 @@ yarn-error.log*
 
 # project
 prepros-6.config
+dist/
