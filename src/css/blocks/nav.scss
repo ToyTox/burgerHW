@@ -1,6 +1,6 @@
 .nav {
   margin-right: rem(15px);
-  @include ubuntu;
+  @include ubuntu(medium);
 }
 
 .nav__list {

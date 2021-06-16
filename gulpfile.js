@@ -36,6 +36,11 @@ function copyImages() {
     .pipe(dest('./dist/img'))
 }
 
+function copyFonts() {
+  return src('src/css/fonts/**/*')
+    .pipe(dest('./dist/fonts'))
+}
+
 function handleStyles() {
   const styles = ['node_modules/normalize.css/normalize.css', 'src/css/index.scss'];
 
@@ -57,6 +62,7 @@ function handleStyles() {
 function server() {
   watch('./src/*.html', series(copyHtml));
   watch('./src/img/**/*.*', series(copyImages));
+  watch('./src/fonts/**/*.*', series(copyFonts));
   watch('./src/css/**/*.scss', series(handleStyles));
 
   browserSync.init({
@@ -67,5 +73,5 @@ function server() {
   });
 }
 
-exports.serve = series(handleClean, copyHtml, copyImages, handleStyles, server);
+exports.serve = series(handleClean, copyHtml, copyFonts, copyImages, handleStyles, server);
 exports.build = series(handleClean, copyHtml, copyImages, handleStyles);
