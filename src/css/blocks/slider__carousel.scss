@@ -26,6 +26,7 @@
   flex-grow: 0;
   flex-shrink: 0;
   display: flex;
+  position: relative;
 
   @include tablets {
     flex-direction: column;
@@ -38,15 +39,39 @@
   }
 }
 
+.wrap__slider--btn {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.btn__structure {
+  top: 0;
+  // margin-top: -50px;
+}
+
+.btn__kkal {
+  bottom: 0;
+  margin-bottom: -50px;
+}
+
 .slider__content-pic,
 .slider__content-desc {
   width: 50%;
-  float: left;
+  // float: left;
 
   @include tablets {
     float: none;
     text-align: center;
   }
+}
+
+.slider__content-pic {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
 }
 
 .slider__icon {
@@ -62,14 +87,19 @@
 
 .slider__content-price {
   display: flex;
+  align-items: center;
 }
 
 .title__price-burger {
-  font-size: rem(42px);
+  font-size: rem(29px);
   @include gagalin;
   color: $red;
   text-transform: lowercase;
   margin-right: rem(30px);
+}
+
+.title__price-burger span {
+  font-size: rem(71px);
 }
 
 .slider__right-img {

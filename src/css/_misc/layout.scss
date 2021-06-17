@@ -21,7 +21,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
-  @include ubuntu();
+  @include ubuntu(light);
   color: black;
 }
 
