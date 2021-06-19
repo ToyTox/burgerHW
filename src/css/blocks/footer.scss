@@ -5,7 +5,7 @@
   bottom: 0;
   right: 0;
   left: 0;
-  padding: rem(10px) 0;
+  padding: rem(16px) 0;
 }
 
 .footer__container {
@@ -23,13 +23,13 @@
   color: #fff;
 }
 
-.social {
-  display: flex;
-}
-
 .phone {
   text-decoration: none;
   color: $red;
+}
+
+.social {
+  display: flex;
 }
 
 .social__item {
@@ -42,5 +42,10 @@
 
 .social__link {
   display: flex;
-  height: rem(120px);
+  // height: rem(120px);
+}
+
+.social__logo {
+  width: 35px;
+  height: 35px;
 }

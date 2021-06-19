@@ -1,14 +1,12 @@
 .menu-accordeon {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
 }
 
 .menu-accordeon__item {
   display: flex;
   height: 100%;
-  // float: left;
   justify-content: flex-end;
   position: relative;
 
@@ -21,7 +19,7 @@
       color: #fff;
       opacity: 1;
       padding: rem(32px) rem(16px);
-      width: rem(540px);
+      // width: rem(540px);
       visibility: visible;
       @include ubuntu;
       max-width: rem(460px);
@@ -45,9 +43,7 @@
 }
 
 .menu-accordeon__item-active {
-  // .menu-accordeon__text-active {
-  // color: #fff;
-  width: rem(540px);
+  // width: rem(540px);
   visibility: visible;
   opacity: 1;
 
@@ -61,12 +57,25 @@
 }
 
 .menu-accordeon__touch {
-  float: left;
   position: relative;
   width: rem(80px);
   display: block;
   height: 100%;
+  background: url('../../img/bg/meateat.jpg');
+  background-size: cover;
 }
+
+.vegan .menu-accordeon__touch {
+  background: url('./img/bg/vegan.jpg');
+  background-size: cover;
+}
+
+.diet .menu-accordeon__touch {
+  background: url('./img/bg/diet.jpg');
+  background-size: cover;
+}
+
+
 
 .menu-accordeon__touch-text {
   color: #fff;
@@ -79,17 +88,9 @@
   top: 100%;
   margin-top: rem(-20px);
   white-space: nowrap;
-  // background: url('../../img/bg/meateat.jpg');
 }
 
 .menu-accordeon__text {
-  // height: 100%;
-  // float: left;
-  // // padding: rem(60px) rem(30px);
-  // background: rgba(#2f3234, .93);
-  // width: 0;
-  // // overflow: hidden;
-  // visibility: hidden;
   color: #fff;
   @include ubuntu;
   max-width: rem(0px);

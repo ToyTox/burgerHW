@@ -179,6 +179,14 @@
                   </div>
                 </li>
                 <li class="slider__content-item">
+                  <div class="wrap__slider--btn">
+                    <div class="btn__structure">
+                      <img src="./img/btn__burger.png" alt="" />
+                    </div>
+                    <div class="btn__structure">
+                      <img src="./img/btn__kkal.png" alt="" />
+                    </div>
+                  </div>
                   <div class="slider__content-pic">
                     <img
                       src="./img/content/burger-sandwich.png"
@@ -197,12 +205,22 @@
                       добавлением экзотического соуса чураско.
                     </div>
                     <div class="slider__content-price">
-                      <div class="title__price-burger">500 рублей</div>
+                      <div class="title__price-burger">
+                        <span>300</span> рублей
+                      </div>
                       <button type="button" class="btn">заказать</button>
                     </div>
                   </div>
                 </li>
                 <li class="slider__content-item">
+                  <div class="wrap__slider--btn">
+                    <div class="btn__structure">
+                      <img src="./img/btn__burger.png" alt="" />
+                    </div>
+                    <div class="btn__structure">
+                      <img src="./img/btn__kkal.png" alt="" />
+                    </div>
+                  </div>
                   <div class="slider__content-pic">
                     <img
                       src="./img/content/Chiken-burger.png"
@@ -221,7 +239,9 @@
                       добавлением экзотического соуса чураско.
                     </div>
                     <div class="slider__content-price">
-                      <div class="title__price-burger">500 рублей</div>
+                      <div class="title__price-burger">
+                        <span>800</span> рублей
+                      </div>
                       <button type="button" class="btn">заказать</button>
                     </div>
                   </div>
@@ -270,7 +290,7 @@
               <a class="team-accordeon__touch" href="#">Ричард Джеймс</a>
               <div class="team-accordeon__desc team-accordeon__desc_expanded">
                 <div class="team-accordeon__pic">
-                  <img src="#" alt="" class="team-accordeon__pic" />
+                  <!-- <img src="#" alt="" class="team-accordeon__pic" /> -->
                 </div>
                 <div class="team-accordeon__text">
                   <div class="team-accordeon__role">Оператор</div>
@@ -331,31 +351,26 @@
       <section class="section menu">
         <h2 class="title title__menu title--color--white">Меню</h2>
         <ul class="menu-accordeon" id="accordeonMenu">
-          <li class="menu-accordeon__item menu-accordeon__item-active">
+          <li class="menu-accordeon__item menu-accordeon__item-active meateat">
             <a
               href="#"
               class="menu-accordeon__touch"
-              style="background-image: url('./img/bg/meateat.jpg')"
             >
               <div class="menu-accordeon__touch-text">для мясоедов</div>
             </a>
             <div class="menu-accordeon__desc">
               <div class="menu-accordeon__text menu-accordeon__text-active">
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Quisquam incidunt possimus quibusdam expedita cumque
-                  voluptates tempora vel similique tenetur placeat, aperiam ut
-                  hic explicabo illum sed aliquid veritatis molestias
-                  necessitatibus.
+                  Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр.
+                  Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.
                 </p>
               </div>
             </div>
           </li>
-          <li class="menu-accordeon__item">
+          <li class="menu-accordeon__item vegan">
             <a
               href="#"
               class="menu-accordeon__touch"
-              style="background-image: url('./img/bg/vegan.jpg')"
             >
               <div class="menu-accordeon__touch-text">вегетарианские</div>
             </a>
@@ -371,11 +386,10 @@
               </div>
             </div>
           </li>
-          <li class="menu-accordeon__item">
+          <li class="menu-accordeon__item diet">
             <a
               href="#"
               class="menu-accordeon__touch"
-              style="background-image: url('./img/bg/diet.jpg')"
             >
               <div class="menu-accordeon__touch-text">диетическме</div>
             </a>
@@ -753,8 +767,6 @@
       </div>
     </div>
 
-    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
-    <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
     <script
       src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=688b9400-1a97-4770-ac85-9e0844129850"
       type="text/javascript"
@@ -766,14 +778,5 @@
     <script src="./js/accordeon.js"></script>
     <script src="./js/form.js"></script>
     <script src="./js/myMap.js"></script>
-
-    <svg xmlns="http://www.w3.org/2000/svg">
-      <symbol id="arrow__left">
-        <path
-          d="M1.10328 15.2882C1.09282 14.0093 1.56838 12.7303 2.5324 11.7514L13.7858 1.12003C14.1867 0.740741 14.8199 0.758563 15.1992 1.16047C15.5765 1.5604 15.5617 2.19354 15.1588 2.57385L3.93114 13.18C2.79754 14.3343 2.81411 16.2383 3.99163 17.3977L15.366 27.792C15.7741 28.1667 15.8003 28.7995 15.4296 29.2045C15.0569 29.6116 14.4241 29.6408 14.017 29.2681L2.61644 18.847C1.61737 17.8651 1.11382 16.5762 1.10328 15.2882Z"
-          fill="white"
-        />
-      </symbol>
-    </svg>
   </body>
 </html>

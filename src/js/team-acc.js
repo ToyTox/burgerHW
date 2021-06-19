@@ -1,13 +1,18 @@
-$(function () {
-  const btns = [$('.team-accordeon__touch')];
+document.addEventListener('DOMContentLoaded', () => {
+  const btn = document.querySelectorAll('.team-accordeon__touch');
+  const allMembers = document.querySelectorAll('.team-accordeon__desc');
+  const accordeonItems = document.querySelectorAll('.team-accordeon__item');
 
-  btns.forEach((item) => {
-    item.click(function (e) {
-      e.preventDefault();
+  btn.forEach(function (item, i) {
+    item.addEventListener('click', (event) => {
+      event.preventDefault();
 
-      item.parent().removeClass('active');
+      allMembers.forEach(i => i.classList.remove('team-accordeon__desc_expanded'));
+      accordeonItems.forEach(i => i.classList.remove('active'));
 
-      $(this).parent().addClass('active');
-    });
-  });
-});
+      // console.log(allMembers[i]);
+      allMembers[i].classList.add('team-accordeon__desc_expanded');
+      accordeonItems[i].classList.add('active');
+    })
+  })
+})

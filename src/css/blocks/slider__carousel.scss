@@ -11,17 +11,19 @@
 
 .slider__content-column {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   overflow: hidden;
 }
 
 .slider__content-list {
   display: flex;
+  transition: all .7s ease-in-out;
 }
 
 .slider__content-item {
-  width: 100%;
+  // width: 100%;
+  width: rem(925px);
   height: 100%;
   flex-grow: 0;
   flex-shrink: 0;

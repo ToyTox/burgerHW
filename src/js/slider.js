@@ -1,22 +1,27 @@
-const rootSlider = document.getElementById('sliderRoot');
+document.addEventListener('DOMContentLoaded', () => {
+  const rootSlider = document.getElementById('sliderRoot');
+  const maxWidth = document.getElementById('sliderRoot').offsetWidth;
+  const leftArrow = document.querySelector('#left');
+  const rightArrow = document.querySelector('#right');
+  let sliderStep = 0;
+  let widthSlide = document.querySelector('.slider__content-item').clientWidth;
 
-const leftArrow = document.querySelector('#left');
-const rightArrow = document.querySelector('#right');
+  leftArrow.addEventListener('click', () => {
+    if(sliderStep === 0) {
+      sliderStep = maxWidth;
+    }
 
-let sliderStep = 0;
-let widthSlider = document.querySelector('.slider__content-list').clientWidth;
+    sliderStep -= widthSlide;
+    rootSlider.style.transform = `translate(-${sliderStep}px)`;
+  });
+  
+  rightArrow.addEventListener('click', () => {
+    sliderStep += widthSlide;
 
-leftArrow.addEventListener('click', function () {
-  sliderStep -= widthSlider;
-  rootSlider.style.transform = 'translate(-' + sliderStep + 'px)';
+    if(sliderStep === maxWidth) {
+      sliderStep = 0;
+    }
+
+    rootSlider.style.transform = `translate(-${sliderStep}px)`;
+  });
 });
-
-rightArrow.addEventListener('click', function () {
-  sliderStep += widthSlider;
-  rootSlider.style.transform = 'translate(-' + sliderStep + 'px)';
-});
-
-// function calculateMaxWidth(w, sliderStep){
-//   return (w + sliderStep);
-// }
-// console.log(rootSlider.childNodes)
