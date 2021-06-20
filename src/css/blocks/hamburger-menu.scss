@@ -30,39 +30,6 @@
   right: rem(30px);
 }
 
-// .hamburder__logo-line {
-//   position: absolute;
-//   top: 50%;
-//   margin-top: rem(-2px);
-//   margin-left: rem(-13px);
-//   left: 50%;
-//   width: rem(26px);
-//   height: rem(4px);
-//   border-radius: 2px;
-//   background-color: #fff;
-
-//   &:before {
-//     content: '';
-//     transform: translateY(rem(-7px));
-//   }
-
-//   &:after {
-//     content: '';
-//     transform: translateY(rem(7px));
-//   }
-// }
-
-// .hamburder__logo-line:before,
-// .hamburder__logo-line:after {
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   width: rem(25px);
-//   height: rem(4px);
-//   border-radius: 2px;
-//   background-color: #fff;
-// }
-
 .hamburger-menu__item {
   display: flex;
   align-items: center;

@@ -80,4 +80,4 @@ function server() {
 }
 
 exports.serve = series(handleClean, copyHtml, copyFonts, copyImages, handleStyles, copyJS, server);
-exports.build = series(handleClean, copyHtml, copyImages, handleStyles);
+exports.build = series(handleClean, copyHtml, copyFonts, copyImages, handleStyles, copyJS);

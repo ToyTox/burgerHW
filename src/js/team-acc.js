@@ -7,12 +7,13 @@ document.addEventListener('DOMContentLoaded', () => {
     item.addEventListener('click', (event) => {
       event.preventDefault();
 
-      allMembers.forEach(i => i.classList.remove('team-accordeon__desc_expanded'));
-      accordeonItems.forEach(i => i.classList.remove('active'));
+      allMembers.forEach((i) =>
+        i.classList.remove('team-accordeon__desc_expanded'),
+      );
+      accordeonItems.forEach((i) => i.classList.remove('active'));
 
-      // console.log(allMembers[i]);
       allMembers[i].classList.add('team-accordeon__desc_expanded');
       accordeonItems[i].classList.add('active');
-    })
-  })
-})
+    });
+  });
+});

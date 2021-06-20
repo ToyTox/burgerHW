@@ -7,18 +7,18 @@ document.addEventListener('DOMContentLoaded', () => {
   let widthSlide = document.querySelector('.slider__content-item').clientWidth;
 
   leftArrow.addEventListener('click', () => {
-    if(sliderStep === 0) {
+    if (sliderStep === 0) {
       sliderStep = maxWidth;
     }
 
     sliderStep -= widthSlide;
     rootSlider.style.transform = `translate(-${sliderStep}px)`;
   });
-  
+
   rightArrow.addEventListener('click', () => {
     sliderStep += widthSlide;
 
-    if(sliderStep === maxWidth) {
+    if (sliderStep === maxWidth) {
       sliderStep = 0;
     }
 
